@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
 *, *::before, *::after {
@@ -19,7 +20,8 @@ html {
         "main";
 }
 
-header {
+ /* --- HEADER --- */
+.header {
     grid-area: header;
     display: flex;
     flex-direction: row;
@@ -73,56 +75,117 @@ header {
     margin-left: 10px;
 }
 
-nav {
+/* --- NAV --- */
+.nav {
     grid-area: navigation;
     background-color: #4d4c72;
-    height: 50px; 
 }
 
-main {
+.nav a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8px 26px;
+}
+
+/* --- MAIN --- */
+.main {
     grid-area: main;
 }
 
-.widget-container-full, .widget-container-half {
-    width: 95vw;
+.main h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-weight: 500;
 }
 
-@media screen and (min-width: 768px) {
+.main-header {
+    display: flex;
+    height: 60px;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    border-right: 1px solid #cccccc;
+    background-color: white;
+    width: 33.33%;
+}
+
+.tab {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #cccccc;
+    width: 66.66%;
+}
+
+/* --- ALERT BAR --- */
+.alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #7477bf;
+    background-color: #7477bf;
+    font-weight: 200;
+    font-size: 0.9rem;
+    border-radius: 5%;
+    height: 35px;
+    margin: 1rem;
+    color: white;
+}
+
+.alert span {
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+/* --- TRAFFIC SECTION --- */
+.traffic {
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+.traffic-nav {
+    list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 55px 1fr;
+        grid-template-columns: 70px 1fr;
         grid-template-areas: 
             "header header"
             "navigation main";
     }
 
-    .main {
-        display: grid;
-        grid-template-columns: 50%;
+    /* --- SIDEBAR NAV --- */
+   .nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+   
+   .nav img {
+       margin-top: 20px;
+   }
+
+   /* --- TRAFFIC SECTION --- */
+
+    .traffic-header {
+        list-style-type: none;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .traffic, .social {
-        grid-column: 1 / span 2;
-    }
-
-    .daily, .members, .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-    }
-
-    .widget-container-full {
-        width: 90vw;
-    }
-
-    .widget-container-half {
-        width: 45vw;
-    }
-
-    .nav {
-        height: 100%;
-        width: 55px;
+    .traffic-nav-link {
+        font-weight: 400;
+        margin-left: 15px;
     }
 
 }
