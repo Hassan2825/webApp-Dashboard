@@ -16,6 +16,8 @@
         "main";
 }
 
+
+
 /* HEADER */
 header {
     grid-area: header;
@@ -63,6 +65,14 @@ header {
         margin-left: 10px;
     }
 
+    .notifcation-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #90ee90;
+        margin-bottom: 10%;
+    }
+
     .header img {
         border-radius: 50%;
         margin-left: 10px;
@@ -89,12 +99,23 @@ nav {
         margin: 10px 26px;
     }
 
-    .traffic-nav {
+
+
+/* TRAFFIC    */
+.traffic-nav {
         list-style-type: none;
         margin: 10px 1rem 10px 1rem;
         display: flex;
         justify-content: space-between;
+}
+
+    .green-link {
+        background-color: #81c98f;
+        border-radius: 30%;
+        border: 4px solid #81c98f;
+        color: white;
     }
+
 
 
 /* MAIN */
