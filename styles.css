@@ -58,6 +58,14 @@ header {
         margin-top: 4px;
     }
 
+    .bell-svg:hover {
+        transition: .3s ease-out;
+    }
+
+    .bell-svg:hover {
+        transform: scale(1.2)
+    }
+
     .header .vl {
         border-left: 1px solid #9094b7;
         height: 40px;
@@ -88,15 +96,15 @@ header {
 nav {
     grid-area: navigation;
     background-color: #4d4c72;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
 }
 
     .navigation a {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 10px 26px;
+      margin: 0px 20px;
     }
-
+  
 
 /* TRAFFIC    */
 .traffic-nav {
